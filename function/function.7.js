@@ -1,10 +1,12 @@
-// Tulis function calculateRectangleArea di sini
-function calculateRectangleArea(panjang, lebar) {
-    return panjang * lebar
+// Tulis function createProfile di sini
+function createProfile(name, status = 'Member') {
+    let result = `Profil: ${name} (${status})`
+        return result
+
 }
 
-// Panggil function dan hitung luas
-let luas1 = calculateRectangleArea(10, 5);
-let luas2 = calculateRectangleArea(7, 3);
-console.log("Luas persegi panjang (10x5): " + luas1);
-console.log("Luas persegi panjang (7x3): " + luas2);
+// Panggil function dengan dan tanpa parameter kedua
+let profil1 = createProfile("Budi");
+let profil2 = createProfile("Sari", "Admin");
+console.log(profil1);
+console.log(profil2);
