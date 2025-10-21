@@ -1,0 +1,14 @@
+<script> angka;
+
+// Tulis kode while loop di sini untuk validasi input
+while (isNaN(angka) || angka < 1 || angka > 10) {
+  let input = prompt("Masukkan angka antara 1 sampai 10:");
+  angka = Number(input);
+
+  if (isNaN(angka) || angka < 1 || angka > 10) {
+    alert("Input tidak valid. Silakan coba lagi.");
+  }
+}
+
+console.log("Angka valid yang dimasukkan: " + angka);
+</script>

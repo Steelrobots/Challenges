@@ -1,0 +1,21 @@
+<script>
+let angkaRahasia = 7;
+let tebakan;
+let percobaan = 0;
+// Tulis kode while loop di sini untuk game tebak angka
+ 
+while(tebakan !== angkaRahasia){
+    let input = prompt('Masukkan nomor tebakan anda')
+    tebakan = Number(input)
+    if(tebakan > angkaRahasia){
+        percobaan++
+        alert('Terlalu besar! Coba lagi.')
+        
+    } else if(tebakan< angkaRahasia){
+        percobaan++
+       alert('Terlalu kecil! Coba lagi.')
+        
+    }
+}
+alert("Selamat! Anda berhasil menebak dalam " + percobaan + " percobaan");
+</script>

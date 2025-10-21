@@ -1,0 +1,23 @@
+<script>
+  let password;
+  let percobaan = 0;
+  let maxPercobaan = 3;
+  let berhasil = false;
+  // Tulis kode while loop di sini untuk validasi password
+  while (percobaan < maxPercobaan) {
+    let password = prompt('masukkan password anda')
+    if (password === "admin123") {
+      berhasil = true
+      percobaan = 3
+    } else {
+      percobaan++
+      alert(`Password salah.sisa percobaan ${maxPercobaan - percobaan}`)
+    }
+
+  }
+  if (berhasil) {
+    alert("Login berhasil!");
+  } else {
+    alert("Akses ditolak. Terlalu banyak percobaan gagal.");
+  }
+</script>
