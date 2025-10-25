@@ -1,0 +1,18 @@
+<script>
+    let password;
+    let valid = false;
+    // Tulis kode do-while loop di sini untuk validasi password
+    do {
+        let validate = /[a-z]+\d/i
+        let password = prompt('Buat password anda')
+        if (password.length <= 6 && !validate.test(password)) {
+          alert("Password tidak valid! Harus minimal 6 karakter dan mengandung angka.")
+        } else{
+            alert('Password valid')
+            valid = true
+        }
+
+
+    } while (!valid)
+    alert("Password berhasil dibuat: " + password);
+</script>
