@@ -1,6 +1,6 @@
 let angka1 = 10;
 let angka2 = 3;
-let operator = "/";
+let operator = "+";
 // Tulis kode if-else if-else statement di sini
 let hasil;
 if (operator == "+") {
@@ -10,7 +10,8 @@ if (operator == "+") {
 } else if (operator == "*") {
     hasil = angka1 * angka2
 } else if (operator == "/" && angka2 != 0) {
-    hasil = angka1 / angka2
+    let bagi = angka1 / angka2
+    hasil = bagi.toFixed(2)
 } else hasil = null
 
 if (hasil != null) {
