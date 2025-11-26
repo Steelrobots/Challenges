@@ -3,15 +3,16 @@ function arrayAnalyzer(arr) {
     const sortedArr = [...arr].sort((a, b) => a - b);
     const mid = Math.floor(sortedArr.length / 2);
     const median = sortedArr.length % 2 !== 0 ? sortedArr[mid] : (sortedArr[mid - 1] + sortedArr[mid]) / 2;
+ 
     return {
         original: [...arr],
         length: arr.length,
         statistics: {
             sum: arr.reduce((total, sum) => total + sum),
-            average: arr.reduce((total, sum) => total + sum) / arr.length,
+            average: Number((arr.reduce((total, sum) => total + sum) / arr.length).toFixed(2)),
             min: Math.min(...arr),
             max: Math.max(...arr),
-            median: median
+            median: median,
         },
         transformations: {
             doubled: arr.map(x => x * 2),
@@ -19,14 +20,15 @@ function arrayAnalyzer(arr) {
             filtered: arr.filter(n => n > 4),
             reversed: [...arr].reverse()
         },
-        sorted:{
+        sorted: {
             ascending: [...arr].sort((a, b) => a - b),
             descending: [...arr].sort((a, b) => b - a)
         },
-        validation:{
+        validation: {
             allNumbers: arr.every(x => typeof x === 'number'),
             hasNegatives: arr.some(x => x < 0),
-            hasZeros
+            hasZeros: arr.includes(0),
+            hasDuplicates:  arr.some((item, index) => arr.indexOf(item) !== index)
         }
     }
 }
