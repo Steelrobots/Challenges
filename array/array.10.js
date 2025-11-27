@@ -1,9 +1,31 @@
 // Tulis function arrayAnalyzer di sini
 function arrayAnalyzer(arr) {
+    // Mencari Median
     const sortedArr = [...arr].sort((a, b) => a - b);
     const mid = Math.floor(sortedArr.length / 2);
     const median = sortedArr.length % 2 !== 0 ? sortedArr[mid] : (sortedArr[mid - 1] + sortedArr[mid]) / 2;
- 
+    // Mencari Mode
+    const freq = {}
+    let maxCount = 0
+    for (const num of arr) {
+        freq[num] = (freq[num] || 0) + 1
+        if (freq[num] > maxCount) {
+            maxCount = freq[num]
+        }
+    }
+
+    let modes = null
+    if (maxCount > 1) {
+        modes = []
+
+        for (const num in freq) {
+            if (freq[num] === maxCount) {
+                modes.push(Number(num))
+            }
+        }
+    }
+
+
     return {
         original: [...arr],
         length: arr.length,
@@ -13,6 +35,7 @@ function arrayAnalyzer(arr) {
             min: Math.min(...arr),
             max: Math.max(...arr),
             median: median,
+            mode: modes
         },
         transformations: {
             doubled: arr.map(x => x * 2),
@@ -28,7 +51,7 @@ function arrayAnalyzer(arr) {
             allNumbers: arr.every(x => typeof x === 'number'),
             hasNegatives: arr.some(x => x < 0),
             hasZeros: arr.includes(0),
-            hasDuplicates:  arr.some((item, index) => arr.indexOf(item) !== index)
+            hasDuplicates: arr.some((item, index) => arr.indexOf(item) !== index)
         }
     }
 }

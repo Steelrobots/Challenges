@@ -13,8 +13,9 @@ if (operator == "+") {
     let bagi = angka1 / angka2
     hasil = bagi.toFixed(2)
 } else hasil = null
+console.log('Operator tidak valid ')
 
-if (hasil != null) {
+if (hasil != null)
     console.log(`${angka1} ${operator} ${angka2}= ${hasil}`)
-} else console.log('Operator tidak valid ')
+
 

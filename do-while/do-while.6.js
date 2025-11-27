@@ -13,22 +13,22 @@ let benar = 0;
 // Tulis kode do-while loop di sini untuk kuis
 async function main() {
     do {
-        console.log(`Soal ${nomorSoal +1}: ${soal[nomorSoal]}`)
-        jawabanUser =parseInt( await rl.question('Jawaban kamu: '))
-        if(jawabanUser === jawaban[nomorSoal] ){
+        console.log(`Soal ${nomorSoal + 1}: ${soal[nomorSoal]}`)
+        jawabanUser = parseInt(await rl.question('Jawaban kamu: '))
+        if (jawabanUser === jawaban[nomorSoal]) {
             console.log('Benar!')
             benar++
-        } else{
+        } else {
             console.log(`salah! Jawaban yang benar: ${jawaban[nomorSoal]}`)
         }
         nomorSoal++
-        if(nomorSoal < soal.length){
-            const tanya = await rl.question('Ingin lanjut ke soal berikutnya? (y/n)' )
-            lanjut = (tanya ==="y")
+        if (nomorSoal < soal.length) {
+            const tanya = await rl.question('Ingin lanjut ke soal berikutnya? (y/n)')
+            lanjut = (tanya === "y")
         } else lanjut = false
 
     } while (lanjut)
-        rl.close()
-        console.log("Kuis selesai! Skor: " + benar + "/" + nomorSoal);
+    rl.close()
+    console.log("Kuis selesai! Skor: " + benar + "/" + nomorSoal);
 }
 main()
