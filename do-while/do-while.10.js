@@ -11,7 +11,7 @@ let adaNasabahBaru;
 async function main() {
     let sisaAntrian = antrian.length
     do {
-        while(antrian.length >0){
+        while (antrian.length > 0) {
             const nasabah = antrian.shift()
             console.log(`melayani nasabah:${nasabah}`)
             nasabahDilayani++

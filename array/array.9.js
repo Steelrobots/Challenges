@@ -1,7 +1,7 @@
 // Tulis function validateArrayData di sini
 function validateArrayData(arr) {
     const fitstType = typeof arr[0];
-   
+
     return {
         isValid: arr.every(item => typeof item === fitstType),
         isNumber: arr.every(item => typeof item === 'number'),
@@ -10,7 +10,7 @@ function validateArrayData(arr) {
         stats: {
             total: arr.length,
             number: arr.filter(number => typeof number === "number").length,
-            strings:arr.filter(number => typeof number === "strings").length,
+            strings: arr.filter(number => typeof number === "strings").length,
             nulls: arr.filter(number => typeof number === "null").length,
             undefined: arr.filter(number => typeof number === "undefined").length
 

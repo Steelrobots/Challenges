@@ -11,7 +11,7 @@ function searchArray(arr, criteria) {
         check = (item) => item < value
         console.log("less")
     } else if (condition === "contains") {
-        check = (item) => typeof item === "string" && item.includes(value);
+        check = (item) => typeof item === type && item.includes(value);
         console.log("contains")
     }
 

@@ -3,7 +3,7 @@ let percobaan = 0;
 // Tulis kode do-while loop di sini untuk generate angka genap
 let berhasil;
 do {
-    
+
     angkaRandom = Math.floor(Math.random() * 100) + 1
     if (angkaRandom % 2 !== 0) {
         percobaan += 1
@@ -11,7 +11,7 @@ do {
         berhasil = false
     } else {
         console.log(`percobaan ${percobaan}: ${angkaRandom} (genap, selesai!)`)
-        berhasil= true
+        berhasil = true
     }
 
 } while (!berhasil)

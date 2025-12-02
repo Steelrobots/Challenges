@@ -12,7 +12,7 @@ function manageQueue(arr, operation) {
 
         } else if (op === 'dequeue') {
             if (arr.length === 0)
-            arr.shift();
+                arr.shift();
             jumlahDe++
         }
     }

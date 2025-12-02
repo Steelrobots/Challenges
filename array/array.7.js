@@ -8,7 +8,7 @@ function transformArray(arr, operations) {
         if (operations.multiply) {
             result *= operations.multiply;
         }
-         if (operations.add) {
+        if (operations.add) {
             result += operations.add
         }
         return result;
